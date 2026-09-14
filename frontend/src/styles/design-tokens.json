@@ -1,0 +1,24 @@
+{
+  "style": "consulting_pro",
+  "name": "Consulting Professional",
+  "project_name": "storefront-pro",
+  "palette": {
+    "primary": "#ea580c",
+    "accent": "#6366f1",
+    "heading": "#431407",
+    "navBg": "#ffffff",
+    "footerBg": "#431407",
+    "text": "#1e293b",
+    "muted": "#64748b",
+    "card": "#ffffff",
+    "surface": "#f8fafc",
+    "border": "#e2e8f0",
+    "bg": "#ffffff"
+  },
+  "typography": {
+    "display": "Poppins",
+    "sans": "Roboto",
+    "mono": "JetBrains Mono"
+  },
+  "theme": "light"
+}

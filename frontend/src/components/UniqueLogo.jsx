@@ -1,28 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function UniqueLogo({ name = 'generated-website-007', size = 'md' }) {
+export default function UniqueLogo({ size = 'md' }) {
   const sz = { sm: 24, md: 32, lg: 40 }[size] || 32;
-  const words = name.split(/(?=[A-Z])|\s+/).filter(Boolean);
-  const primaryWord = words[0] || name;
-  const accentWord = words.slice(1).join('') || '';
-
   return (
     <Link to="/" className="inline-flex items-center gap-2.5 select-none transition-opacity hover:opacity-90">
-      <svg viewBox="0 0 48 48" width={sz} height={sz} className="shrink-0" fill="none">
-        <defs>
-          <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="rgb(6, 182, 212)" />
-            <stop offset="100%" stopColor="rgb(139, 92, 246)" />
-          </linearGradient>
-        </defs>
-        <polygon points="24,4 42,14 42,34 24,44 6,34 6,14" fill="url(#brand-grad)" opacity="0.95" />
-        <polygon points="24,12 34,18 34,30 24,36 14,30 14,18" fill="white" opacity="0.9" />
-        <polygon points="24,18 29,21 29,27 24,30 19,27 19,21" fill="url(#brand-grad)" />
-      </svg>
-      <span className="font-extrabold text-xl tracking-tight text-white font-sans">
-        {primaryWord}
-        {accentWord && <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent ml-0.5">{accentWord}</span>}
+      <div style={{ width: sz, height: sz }} className="shrink-0">
+        <svg viewBox="0 0 48 48" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="40" height="40" rx="12" fill="#ea580c" opacity="0.95"/><rect x="12" y="12" width="24" height="24" rx="6" fill="white" opacity="0.9"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#6366f1"/></svg>
+      </div>
+      <span className="font-extrabold text-xl tracking-tight" style={{ color: '#431407' }}>
+        Storefront <span style={{ color: '#ea580c' }} className="ml-0.5">Pro</span>
       </span>
     </Link>
   );
